@@ -137,7 +137,7 @@
                   // Массив файлов моделей, если нет модели будет добавлена пустая строка
                   const modelFiles = ["" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,""];
                   // Массив файлов изображений, если нет изображения будет добавлена пустая строка
-                  const imageFiles = ["GL_Baner.jpg" ,"ONPU.png" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,""];
+                  const imageFiles = ["1.jpg" ,"2.jpg" ,"3.jpg" ,"4.jpg" ,"5.jpg" ,"6.jpg" ,"7.jpg" ,"8.jpg" ,"" ,"" ,""];
                   // Массив файлов видео, если нет видео будет добавлена пустая строка
                   const videoFiles = ["" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ,""];
                   // Массив файлов аудио, если нет аудио будет добавлена пустая строка
@@ -205,7 +205,8 @@
                             if (imageFiles[i]) {
                                 contentPromises.push(new Promise((resolve) => {
                                     // Объявляем плоскость под изображение
-                                    let geometry1 = new THREE.PlaneBufferGeometry(1, 1, 4, 4);
+                                    [width, height] = [0.386, 0.278].map(el => el * 3)
+                                    let geometry1 = new THREE.PlaneBufferGeometry(width, height, 4, 4);
                                     // Загружаем изображение
                                     let loader = new THREE.TextureLoader();
                                     let texture = loader.load(`${imageFiles[i]}`, render);
