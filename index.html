@@ -205,7 +205,7 @@
                             if (imageFiles[i]) {
                                 contentPromises.push(new Promise((resolve) => {
                                     // Объявляем плоскость под изображение
-                                    [width, height] = [0.386, 0.278].map(el => el * 5)
+                                    [width, height] = [0.386, 0.278].map(el => el * 9)
                                     let geometry1 = new THREE.PlaneBufferGeometry(width, height, 4, 4);
                                     // Загружаем изображение
                                     let loader = new THREE.TextureLoader();
